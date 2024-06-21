@@ -24,3 +24,65 @@
   #root, #__next {
     isolation: isolate;
   }
+
+  
+
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1.4fr 9fr;
+    grid-template-areas: 
+    'header header'
+    'sidebar main';
+    height: 100vh;
+    width: 100vw;
+  }
+
+
+  .header{
+    grid-area: header;
+    height: 100%;
+    /* background-color: aqua; */
+    font-family: "Acme", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+
+  }
+
+  .sidebar{
+    grid-area: sidebar;
+    /* background-color: bisque; */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 30px 40px;
+      
+  }
+
+
+  .main{
+    grid-area: main;
+    /* background-color: blue; */
+    height: 100%;
+    width: 100%;
+  }
+
+
+  ul{
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+
+  li{
+    font-family: "Acme", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.42rem;
+    text-align: center;
+  }
