@@ -70,6 +70,9 @@ font-family: "Acme", sans-serif;
     /* background-color: blue; */
     height: 100%;
     width: 100%;
+
+    position: relative; /* This is necessary to position the button relative to this container */
+    border: 1px solid #ccc;
   }
 
 
