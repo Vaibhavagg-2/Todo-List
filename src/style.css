@@ -83,7 +83,7 @@
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 20px;
-cursor: pointer;
+    cursor: pointer;
   }
 
   li{
