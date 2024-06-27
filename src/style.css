@@ -158,7 +158,7 @@ cursor: pointer;
     position: relative;
   }
   
-  .close-modal {
+  .close-modal,.project-close-modal {
     position: absolute;
     top: 10px;
     right: 10px;
