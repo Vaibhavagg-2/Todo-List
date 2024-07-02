@@ -21,11 +21,6 @@ export function updateTaskList(projectName){
     const container = document.querySelector('.taskList');
     container.innerHTML = ""
 
-    // for (let i = 0; i < localStorage.length; i++) {
-    //     let key = localStorage.key(i); // Get the key
-    //     let value = JSON.parse(localStorage.getItem(key));
-
-    // }
 
     let value = JSON.parse(localStorage.getItem(projectName));
 
@@ -34,11 +29,11 @@ export function updateTaskList(projectName){
 
     value.forEach(task => {
         const taskCard = document.createElement('div');
-const lessDetail = document.createElement('div');
+        const lessDetail = document.createElement('div');
 
-lessDetail.classList.add('lessDetail')
+        lessDetail.classList.add('lessDetail')
         taskCard.classList.add('task');
-console.log(task.id);
+        console.log(task.id);
         taskCard.setAttribute('id',task.id);
 
         const completeCheck = document.createElement('input');
@@ -59,7 +54,7 @@ console.log(task.id);
         // const importantCheck = document.createElement('')
         lessDetail.appendChild(completeCheck);
         lessDetail.appendChild(description);
-lessDetail.appendChild(importantIndicator);
+        lessDetail.appendChild(importantIndicator);
         taskCard.appendChild(lessDetail);
         container.appendChild(taskCard);
     })
