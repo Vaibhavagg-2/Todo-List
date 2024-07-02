@@ -47,6 +47,15 @@ console.log(task.id);
         const description = document.createElement('h2');
         description.textContent = task.name;
 
+        const importantIndicator = document.createElement('input');
+        importantIndicator.type = 'checkbox';
+
+
+        if(task.isChecked){
+            taskCard.classList.add('important');
+        }
+
+
         // const importantCheck = document.createElement('')
         taskCard.appendChild(completeCheck);
         taskCard.appendChild(description);
