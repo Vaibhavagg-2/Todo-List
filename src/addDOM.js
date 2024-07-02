@@ -11,9 +11,15 @@ export let selectedOption = "";
 
 export function addEventListener(){
 
+allTasks();
     addTaskListener();
     addProjectListener();
     selectedProject();
+editForm();
+    impTasks();
+    todayTasks();
+    selected();
+    
 
 } 
 
