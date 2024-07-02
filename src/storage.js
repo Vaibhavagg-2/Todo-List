@@ -12,8 +12,8 @@ export function getProjects(){
             storeProjects("Default Project")
         }
         for (let i = 0; i < localStorage.length; i++) {
-            const key = localStorage.key(i); // Get the key
-            projects.push(key);
+            const key = localStorage.key(i);
+            projects.push(key); // Get the key
         }
         
     return projects;
