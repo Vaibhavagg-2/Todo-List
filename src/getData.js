@@ -19,6 +19,7 @@ export function getTask(){
     const taskName = document.querySelector('#task-name').value;
     const dueDate = document.querySelector('#due-date').value;
     const dueTime = document.querySelector('#due-time').value;
+    const checkImp = document.querySelector('#ImportantCheckbox').checked;
 
     let taskObj = {
         name: taskName,
