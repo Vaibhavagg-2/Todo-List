@@ -1,3 +1,8 @@
+import { isToday } from "date-fns";
+import { currentProject } from "./addDOM";
+
+
+
 export const projects = [];
 
 
