@@ -7,7 +7,7 @@ import { taskFinder } from './storage';
 import { displayImpTasks } from './updateUI';
 
 export let currentProject = "Default Project";
-
+export let selectedOption = "";
 
 export function addEventListener(){
 
