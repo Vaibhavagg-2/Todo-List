@@ -33,11 +33,11 @@ function addTaskListener(){
         taskModal.style.display = 'flex';
       });
 
-      window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-          taskModal.style.display = 'none';
-        }
-      });
+      // window.addEventListener('click', (event) => {
+        //   if (event.target === modal) {
+          //     taskModal.style.display = 'none';
+        //   }
+      // });
     
       modalForm.addEventListener('submit', (event) => {
         event.preventDefault();
