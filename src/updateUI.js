@@ -1,3 +1,6 @@
+import { currentProject } from "./addDOM";
+
+import { editTask,deleteTask, getAllTasks , getImpTasks,getTodayTasks} from "./storage";
 
 
 export function updateProjectList(arr){
