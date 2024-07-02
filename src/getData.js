@@ -23,7 +23,8 @@ export function getTask(){
     let taskObj = {
         name: taskName,
         dueDate: dueDate,
-        dueTime: dueTime
+        dueTime: dueTime,
+        isChecked: checkImp
     }
     console.log(taskObj);
     return taskObj;
