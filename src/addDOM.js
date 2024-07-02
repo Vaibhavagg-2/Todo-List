@@ -127,3 +127,41 @@ function editForm() {
 //         }
 //     })
 // }
+
+function allTasks(){
+  const allTasksBtn = document.querySelector('.allTask ');
+
+  allTasksBtn.addEventListener('click',displayAllTasks);
+}
+
+function impTasks(){
+  const impTasks = document.querySelector('#impTasks');
+
+  impTasks.addEventListener('click',displayImpTasks);
+}
+
+function todayTasks(){
+  const todayTasks = document.querySelector('#todayTasks');
+  
+  todayTasks.addEventListener('click',displayTodayTasks);
+}
+
+function selected(){
+  const lists = document.querySelectorAll('.list');
+
+  lists.forEach(list=>{
+    list.addEventListener('click',(e)=>{
+      if (e.target.tagName === 'LI') {
+        // Remove 'selected' class from all items in all lists
+        document.querySelectorAll('.list li').forEach(item => {
+          item.classList.remove('selected');
+        });
+
+        selectedOption = e.target.textContent;
+        // Add 'selected' class to clicked item
+        e.target.classList.add('selected');
+      }
+    });
+
+  });
+}
