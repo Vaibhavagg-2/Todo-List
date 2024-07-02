@@ -92,6 +92,29 @@ export function selectedProject(){
 }
 
 
+function editForm() {
+  const taskList = document.querySelector('.taskList');
+
+  // Event listener on taskList for click events
+  taskList.addEventListener('click', (event) => {
+    if (selectedOption === "Today" || selectedOption === "All Tasks" || selectedOption === "Important Tasks") {return;}
+    else if (event.target && event.target.classList.contains('task')) {
+      let taskId = event.target.getAttribute('id');
+      let editForm = event.target.querySelector('.task-item');
+
+      if (!editForm) {
+        // If no edit form exists, create and append it
+        console.log(currentProject);
+        event.target.appendChild(createEditForm(taskFinder(taskId, currentProject)));
+      } else {
+        // Toggle edit form visibility
+        editForm.classList.toggle('active');
+
+        // Check if edit form should be hidden
+      }
+    }
+  });
+}
 
 // function taskListDisplay(){
 //     const projects = document.querySelector('.projects');
