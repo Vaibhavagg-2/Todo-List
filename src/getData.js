@@ -1,9 +1,19 @@
+import { v4 as uuidv4 } from 'uuid';
+
+function generateUUID() {
+  return uuidv4();
+}
+
+
+
 export function getProject(){
     const projectNameField = document.querySelector('#name');
     const projectName = projectNameField.value;
     console.log(projectName);
     return projectName;
 }
+
+
 
 export function getTask(){
     const taskName = document.querySelector('#task-name').value;
