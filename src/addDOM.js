@@ -2,7 +2,9 @@ import './style.css';
 import { addProject } from './addProject';
 import { getTask } from './getData';
 import { addTask } from './addTask';
-import { updateTaskList } from './updateUI';
+import { createEditForm, displayAllTasks, updateTaskList ,displayTodayTasks} from './updateUI';
+import { taskFinder } from './storage';
+import { displayImpTasks } from './updateUI';
 
 export let currentProject = "DEFAULT PROJECT";
 
