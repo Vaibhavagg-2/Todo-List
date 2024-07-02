@@ -48,6 +48,7 @@ function addTaskListener(){
       modalForm.addEventListener('submit', (event) => {
         event.preventDefault();
         addTask();
+updateTaskList(currentProject);
         taskModal.style.display = 'none';
       });
 }
