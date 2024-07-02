@@ -11,11 +11,11 @@ export let selectedOption = "";
 
 export function addEventListener(){
 
-allTasks();
+    allTasks();
     addTaskListener();
     addProjectListener();
     selectedProject();
-editForm();
+    editForm();
     impTasks();
     todayTasks();
     selected();
@@ -40,15 +40,15 @@ function addTaskListener(){
       });
 
       // window.addEventListener('click', (event) => {
-        //   if (event.target === modal) {
-          //     taskModal.style.display = 'none';
-        //   }
+      //   if (event.target === modal) {
+      //     taskModal.style.display = 'none';
+      //   }
       // });
     
       modalForm.addEventListener('submit', (event) => {
         event.preventDefault();
         addTask();
-updateTaskList(currentProject);
+        updateTaskList(currentProject);
         taskModal.style.display = 'none';
       });
 }
@@ -83,8 +83,6 @@ export function selectedProject(){
     projects.addEventListener('click',(e)=>{
         if(e.target && e.target.nodeName == "LI"){
             const items = document.querySelectorAll('.projects li');
-            items.forEach(item => item.classList.remove('selected'));
-            e.target.classList.add('selected');
             currentProject = e.target.textContent;
             updateTaskList(currentProject);
         }
