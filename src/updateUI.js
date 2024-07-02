@@ -34,8 +34,12 @@ export function updateTaskList(projectName){
 
     value.forEach(task => {
         const taskCard = document.createElement('div');
+const lessDetail = document.createElement('div');
 
+lessDetail.classList.add('lessDetail')
         taskCard.classList.add('task');
+console.log(task.id);
+        taskCard.setAttribute('id',task.id);
 
         const completeCheck = document.createElement('input');
         completeCheck.type = 'checkbox';
