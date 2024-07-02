@@ -22,6 +22,7 @@ export function getTask(){
 
     let taskObj = {
         name: taskName,
+id: generateUUID(),
         dueDate: dueDate,
         dueTime: dueTime,
         isChecked: checkImp
