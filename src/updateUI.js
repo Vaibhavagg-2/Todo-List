@@ -57,8 +57,10 @@ console.log(task.id);
 
 
         // const importantCheck = document.createElement('')
-        taskCard.appendChild(completeCheck);
-        taskCard.appendChild(description);
+        lessDetail.appendChild(completeCheck);
+        lessDetail.appendChild(description);
+lessDetail.appendChild(importantIndicator);
+        taskCard.appendChild(lessDetail);
         container.appendChild(taskCard);
     })
 
