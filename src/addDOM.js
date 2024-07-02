@@ -6,7 +6,7 @@ import { createEditForm, displayAllTasks, updateTaskList ,displayTodayTasks} fro
 import { taskFinder } from './storage';
 import { displayImpTasks } from './updateUI';
 
-export let currentProject = "DEFAULT PROJECT";
+export let currentProject = "Default Project";
 
 
 export function addEventListener(){
