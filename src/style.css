@@ -242,3 +242,107 @@
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
     background-color: rgba(255, 255, 255, 0.5);
   }
+
+  /* .editGrid{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #f9f9f9;
+  }
+
+  .editGrid.active{
+    max-height: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top: none;
+  } */
+
+
+
+
+
+/* editForm styling */
+
+.task-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.2rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    grid-template-areas: 
+    'name date'
+    'time important'
+    'edit delete';
+}
+
+.task-item input, .task-item button{
+  padding: 10px;
+  width: 80%;
+  height: 30px;
+}
+
+
+.task-item button{
+  height: 3rem;
+}
+
+
+.task-name {
+    grid-area: name;
+}
+
+.task-date{
+  grid-area: date;
+}
+
+.task-item{
+  grid-area: time;
+}
+
+.task-delete{
+  grid-area: delete;
+}
+
+.task-edit{
+  grid-area: edit;
+}
+
+.task-date, .task-time, .task-important, .task-edit, .task-delete {
+    width: 100%;
+}
+
+.task-important {
+    display: flex;
+    align-items: center;
+    grid-area: important;
+}
+
+.task-important input {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.active{
+  display: none;
+}
+
+.editContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 1rem;
+}
+
+
+.important{
+  border: 2px solid #BAFF39;
+}
+
+/* li:active{
+  background-color: rgba(255, 255, 255, 0.5);
+} */
