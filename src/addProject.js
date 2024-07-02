@@ -6,8 +6,11 @@ export function addProject(){
 
     let projectArray = projects;
     let projectName = getProject();
-    projectArray.push(projectName);
-    storeProjects(projectName);
-    console.log(projectArray);
-    updateProjectList(projectArray);
+    if(!projects.includes(projectName)){
+        projectArray.push(projectName);
+        storeProjects(projectName);
+        console.log(projectArray);
+        updateProjectList(projectArray);
+    }
+
 }
