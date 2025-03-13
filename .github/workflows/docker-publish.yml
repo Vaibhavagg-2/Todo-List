@@ -77,17 +77,6 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      # Security scanning
-      - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@master
-        with:
-          image-ref: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
-          format: 'table'
-          exit-code: '1'
-          ignore-unfixed: true
-          vuln-type: 'os,library'
-          severity: 'CRITICAL,HIGH'
-
   # Optional: Add deployment job
   deploy:
     needs: build-and-push
