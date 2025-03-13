@@ -74,8 +74,8 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      # Optional: Scan for vulnerabilities
-      - name: Run Trivy vulnerability scanner
+      # Security scanning
+      - name: Scan for vulnerabilities
         uses: aquasecurity/trivy-action@master
         with:
           image-ref: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
@@ -96,4 +96,4 @@ jobs:
       - name: Deploy to production
         run: |
           echo "Deploying to production..."
-          # Add your deployment steps here 
+          # Add your deployment steps here

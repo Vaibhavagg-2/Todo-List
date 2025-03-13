@@ -4,4 +4,9 @@ dist
 .git
 .gitignore
 README.md
-LICENSE 
+LICENSE
+.DS_Store
+.env*
+*.md
+.cache
+coverage
