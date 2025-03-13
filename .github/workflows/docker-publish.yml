@@ -14,7 +14,37 @@ env:
   IMAGE_NAME: ${{ format('{0}/{1}', github.repository_owner, 'todo-list') }}
 
 jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test:coverage
+        env:
+          CI: true
+
+      - name: Upload coverage reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/
+          retention-days: 7
+
   build-and-push:
+    needs: test
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -37,12 +67,6 @@ jobs:
 
       - name: Build application
         run: npm run build
-
-      - name: Run tests
-        run: |
-          npm test
-        env:
-          CI: true
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
