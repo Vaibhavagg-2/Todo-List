@@ -6,8 +6,16 @@ import { createEditForm, displayAllTasks, updateTaskList ,displayTodayTasks} fro
 import { taskFinder } from './storage';
 import { displayImpTasks } from './updateUI';
 
-export let currentProject = "Default Project";
+let currentProject = "Default Project";
 export let selectedOption = "";
+
+export function getCurrentProject() {
+  return currentProject;
+}
+
+export function setCurrentProject(project) {
+  currentProject = project;
+}
 
 export function addEventListener(){
 
